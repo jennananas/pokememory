@@ -10,8 +10,9 @@ function Footer(){
             width:'100vw',
             height:'2.5rem',
             bg:'#FBFBFB',
-            position:'absolute',
+            position:'fixed',
             bottom:'0',
+            left:'0'
         })}>
             <p className={css({
                 color:'#001A6E',

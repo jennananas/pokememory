@@ -11,11 +11,12 @@ function Header(){
             justify:'center',
             gap:'1rem',
             bg: '#FBFBFB',
-            p: '2rem 3rem'
+            p: '2rem 3rem',
+            mb: '5rem'
             })}>
                 <img src="../src/assets/pokememory_logo.svg" alt="logo" className={css({
                     height: 'auto',
-                    width: {lg:'4rem', md:'3.25rem', sm:'2.5rem'}
+                    width: {lg:'4.5rem', md:'4rem', sm:'3.5rem'}
                 })}/>
                 <h1 className={css({
                     fontSize: {lg:'4rem', md:'3rem', sm:'2rem'},
