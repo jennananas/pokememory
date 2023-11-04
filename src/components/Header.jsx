@@ -10,14 +10,15 @@ function Header(){
             align:'center',
             justify:'center',
             gap:'1rem',
-            bg: '#FBFBFB'
+            bg: '#FBFBFB',
+            p: '2rem 3rem'
             })}>
                 <img src="../src/assets/pokememory_logo.svg" alt="logo" className={css({
-                    height:'4rem',
-                    width: '4rem'
+                    height: 'auto',
+                    width: {lg:'4rem', md:'3.25rem', sm:'2.5rem'}
                 })}/>
                 <h1 className={css({
-                    fontSize:'4rem',
+                    fontSize: {lg:'4rem', md:'3rem', sm:'2rem'},
                     color: '#001A6E',
                     fontFamily:'Bowlby One',
                     textTransform:'uppercase'

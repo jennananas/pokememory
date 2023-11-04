@@ -7,8 +7,8 @@ function IntroCard(){
             height:'80vh'
         })}>
             <div className={css({
-            width:'49rem',
-            height:'20rem',
+            width:{lg:'49rem', md:'49rem', sm:'70%'},
+            height:{lg:'20rem', md:'20rem',sm:'40rem'},
             bg: '#FBFBFB', 
             borderRadius: '16px',
             boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'
@@ -31,9 +31,10 @@ function IntroCard(){
             </div>
             
             <div className={flex({
-                direction:'row',
+                direction:{lg:'row', md:'row', sm:'column'},
                 gap:'4.75rem',
                 justify:'center',
+                align:{sm:'center'}
             })}>
                 <BtnLevel level='Easy'/>
                 <BtnLevel level='Medium'/>
