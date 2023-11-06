@@ -404,7 +404,7 @@
   --sizes-min: min-content;
   --sizes-max: max-content;
   --sizes-fit: fit-content;
-  --sizes-breakpoint-sm: 640px;
+  --sizes-breakpoint-sm: 320px;
   --sizes-breakpoint-md: 768px;
   --sizes-breakpoint-lg: 1024px;
   --sizes-breakpoint-xl: 1280px;
@@ -413,7 +413,7 @@
   --animations-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   --animations-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animations-bounce: bounce 1s infinite;
-  --breakpoints-sm: 640px;
+  --breakpoints-sm: 320px;
   --breakpoints-md: 768px;
   --breakpoints-lg: 1024px;
   --breakpoints-xl: 1280px;

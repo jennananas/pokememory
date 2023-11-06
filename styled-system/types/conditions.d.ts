@@ -178,11 +178,11 @@ export interface Conditions {
 	"_horizontal": string
 	/** `&[data-orientation=vertical]` */
 	"_vertical": string
-	/** `@media screen and (min-width: 40em)` */
+	/** `@media screen and (min-width: 20em)` */
 	"sm": string
-	/** `@media screen and (min-width: 40em) and (max-width: 47.996875em)` */
+	/** `@media screen and (min-width: 20em) and (max-width: 47.996875em)` */
 	"smOnly": string
-	/** `@media screen and (max-width: 40em)` */
+	/** `@media screen and (max-width: 20em)` */
 	"smDown": string
 	/** `@media screen and (min-width: 48em)` */
 	"md": string
@@ -208,13 +208,13 @@ export interface Conditions {
 	"2xlOnly": string
 	/** `@media screen and (max-width: 96em)` */
 	"2xlDown": string
-	/** `@media screen and (min-width: 40em) and (max-width: 47.996875em)` */
+	/** `@media screen and (min-width: 20em) and (max-width: 47.996875em)` */
 	"smToMd": string
-	/** `@media screen and (min-width: 40em) and (max-width: 63.996875em)` */
+	/** `@media screen and (min-width: 20em) and (max-width: 63.996875em)` */
 	"smToLg": string
-	/** `@media screen and (min-width: 40em) and (max-width: 79.996875em)` */
+	/** `@media screen and (min-width: 20em) and (max-width: 79.996875em)` */
 	"smToXl": string
-	/** `@media screen and (min-width: 40em) and (max-width: 95.996875em)` */
+	/** `@media screen and (min-width: 20em) and (max-width: 95.996875em)` */
 	"smTo2xl": string
 	/** `@media screen and (min-width: 48em) and (max-width: 63.996875em)` */
 	"mdToLg": string

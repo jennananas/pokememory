@@ -4,7 +4,7 @@ import BtnLevel from './BtnLevel'
 function IntroCard(){
     return(
         <div className={center({
-            height:'80vh'
+            height:'80vh',
         })}>
             <div className={css({
             width:{lg:'49rem', md:'49rem', sm:'70%'},
@@ -21,12 +21,12 @@ function IntroCard(){
                 <h1 className={css({
                     fontSize:'2rem',
                     fontFamily: 'Bowlby One',
-                    mb:'2rem'
+                    mb:'1rem'
                 })}>Rules</h1>
                 <p className={css({
                     fontSize:'1.5rem',
                     fontFamily:'Merriweather Sans',
-                    mb:'2rem'
+                    mb:'1rem'
                 })}>Don't click on the same card twice</p>
             </div>
             

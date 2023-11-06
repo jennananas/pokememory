@@ -1,4 +1,5 @@
 import { defineConfig } from "@pandacss/dev"
+import { buttonRecipe } from "./src/components/recipes/button.recipe"
 
 export default defineConfig({
     // Whether to use css reset
@@ -19,6 +20,9 @@ export default defineConfig({
           lg: '1024px',
           xl: '1280px',
           '2xl': '1536px'
+        },
+        recipes: {
+          button: buttonRecipe
         }
       }
     },

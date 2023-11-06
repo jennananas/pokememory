@@ -12,7 +12,7 @@ function Header(){
             gap:'1rem',
             bg: '#FBFBFB',
             p: '2rem 3rem',
-            mb: '5rem'
+            mb: '0',
             })}>
                 <img src="../src/assets/pokememory_logo.svg" alt="logo" className={css({
                     height: 'auto',

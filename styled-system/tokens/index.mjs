@@ -1616,7 +1616,7 @@ const tokens = {
     "variable": "var(--sizes-fit)"
   },
   "sizes.breakpoint-sm": {
-    "value": "640px",
+    "value": "320px",
     "variable": "var(--sizes-breakpoint-sm)"
   },
   "sizes.breakpoint-md": {
@@ -1652,7 +1652,7 @@ const tokens = {
     "variable": "var(--animations-bounce)"
   },
   "breakpoints.sm": {
-    "value": "640px",
+    "value": "320px",
     "variable": "var(--breakpoints-sm)"
   },
   "breakpoints.md": {

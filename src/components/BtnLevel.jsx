@@ -1,11 +1,12 @@
-import { css } from "../../styled-system/css"
-import button from "./button"
+import { button } from '../../styled-system/recipes'
 
 function BtnLevel(props){
+    const classes = button({size:{
+        sm:'sm',
+        md:'md'
+    }})
     return(
-        <button className={button({
-            visual:'solid', size:'lg'
-        })}>{props.level}</button>
+        <button className={classes.level}>{props.level}</button>
     )
 }
 export default BtnLevel

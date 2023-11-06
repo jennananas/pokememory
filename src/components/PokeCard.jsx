@@ -6,22 +6,25 @@ function PokeCard(props){
     return(
         <div className={flex({
             direction:'column',
-            bg:'white',
+            bg:'#FBFBFB',
             borderRadius:'1.5rem',
-            w:'18rem',
-            h: '18rem',
+            w: {sm:'10rem', md:'15rem', lg:'12rem'},
+            h: {sm:'10rem', md:'15rem', lg:'15rem'}
         })}>
             <img className={css({
                 p:'2rem',
                 h:'70%',
+                sm:{
+                    p:'1rem'
+                },
                 borderBottom: '1px solid rgba(20, 18, 4, 0.12)'
             })} src={props.spriteUrl} alt="pokemon sprite" />
             <h3 className={css({
-                p:'2rem',
-                fontFamily: 'Bowlby One',
+                p:{sm:'0.5rem', md:'1rem', lg:'1rem'},
+                fontFamily: 'Merriweather Sans',
                 color:'#141204',
-                fontSize:'1.25rem',
-                textAlign:'center'
+                fontSize:{sm:'1rem', md:'1.5rem', lg:'1.2rem'},
+                textAlign:'center',
             })}>{props.name}</h3>
         </div>
     )
