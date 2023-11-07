@@ -7,39 +7,49 @@ import { useEffect, useState } from 'react'
 import { button } from '../styled-system/recipes'
 import ReplayIcon from '@mui/icons-material/Replay';
 import {css} from '../styled-system/css'
+
 function App() {
-  const [level, setLevel] = useState("")
+  const [level, setLevel] = useState('Easy')
   const [nbOfCard, setNbOfCard] = useState(0)
   const [isLevelSelected, setIsLevelSelected] = useState(false)
   const [score, setScore] = useState(0)
   const [bestScore, setBestScore] = useState(0)
+  const [isGameOver, setGameOver] = useState(false)
+
   const [clickedIds, setClickedIds] = useState([])
   const [cardsData, setCardsData] = useState([])
-  const [isGameOver, setGameOver] = useState(false)
+  const [displayedCardIds, setDisplayedCardIds] = useState([])
 
   const handleSelectLevel = (selectedLevel) => {
     setLevel(selectedLevel)
     setIsLevelSelected(true)
-    const num = renderCards(selectedLevel)
+    const num = setNbCardToDisplay(selectedLevel)
     setNbOfCard(num)
   }
   
   const handleCardClick = (clickedId) => {
-    clickedIds.includes(clickedId) ? 
-        (
+    clickedIds.includes(clickedId) ? (
         setBestScore(Math.max(score, bestScore)),
         setGameOver(true),
         resetGame()
-        )
-        : (
-      // rajouter des IDs
+        ):(
         setClickedIds([...clickedIds, clickedId]),
         setScore(score+1),
+        addCards(),
         shuffle(cardsData)
-        // console.log(clickedIds)
-    )
+        )
   }
-  const renderCards = (level) => {
+  const addCards = async () => {
+    if (score+1 === displayedCardIds.length) {
+      const oldIds = cardsData.map((card) => card.id)
+      const newIds = generateUniqueIds(2, 1017, oldIds)
+      const newCards = await getCardsData(newIds);
+      setCardsData([...cardsData, ...newCards]);
+      setDisplayedCardIds([...displayedCardIds, ...newIds])
+    }
+  };
+  
+  const setNbCardToDisplay = (level) => {
     let numCards = 0;
     if (level === 'Easy') {
       numCards = 4;
@@ -51,13 +61,17 @@ function App() {
     return numCards
   }
 
-  const getRandomIds = (quantity, max) => {
-    const set = new Set()
-    while(set.size < quantity) {
-      set.add(Math.floor(Math.random() * max) + 1)
+  const generateUniqueIds = (quantity, max, existingData) => {
+    const uniqueIds = new Set();
+    while (uniqueIds.size < quantity) {
+      const newId = Math.floor(Math.random() * max) + 1;
+      if (!existingData.some(data => data.id === newId)) {
+        uniqueIds.add(newId);
+      }
     }
-    return Array.from(set)
-  }
+  
+    return Array.from(uniqueIds);
+  };
   const shuffle = (array) => {
     let currentIndex = array.length,  randomIndex;
   
@@ -79,14 +93,18 @@ function App() {
   useEffect(() => {
     const fetchCardsData = async () => {
       if (nbOfCard !== 0) {
-        const ids = getRandomIds(nbOfCard, 1017);
-        const data = await getCardsData(ids);
-        setCardsData(data);
+        const newIds = generateUniqueIds(nbOfCard, 1017, displayedCardIds);
+        const newData = await getCardsData(newIds);
+        const uniqueNewData = newData.filter((newCard) => {
+          return !cardsData.some((card) => card.id === newCard.id);
+        });
+    
+        setCardsData([...cardsData, ...uniqueNewData]);
+        setDisplayedCardIds([...displayedCardIds, ...newIds]);
       }
-    };
-
+    }
     fetchCardsData();
-  }, [nbOfCard]);
+  }, [isLevelSelected]);
 
   const getCardsData = async (ids) => {
     const results = await Promise.all(
@@ -113,7 +131,10 @@ function App() {
     setScore(0),
     setCardsData([]),
     setClickedIds([])
+    setDisplayedCardIds([])
+    setNbOfCard(0)
   }
+
 
   return (
 

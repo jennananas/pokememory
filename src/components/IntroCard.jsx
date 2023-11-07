@@ -5,7 +5,6 @@ import BtnLevel from './BtnLevel'
 function IntroCard(props){
     const handleLevelSelect = (selectedLevel) => {
         props.onLevelSelected(selectedLevel);
-        console.log(selectedLevel)
     };
     return(
         <div className={center({

@@ -5,7 +5,6 @@ function BtnLevel(props){
 
     const handleClick = () => {
         props.onLevelSelected(props.level)
-        console.log(props.level)
     }
     const classes = button({size:{
         sm:'sm',
