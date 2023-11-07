@@ -1,5 +1,6 @@
 import PokeCard from "./PokeCard"
 import { Flipper, Flipped } from "react-flip-toolkit"
+import { wrap } from "../../styled-system/patterns"
 
 
 function CardsContainer(props) {
