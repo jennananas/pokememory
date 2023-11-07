@@ -1,10 +1,9 @@
 import PokeCard from "./PokeCard"
-import { css } from "../../styled-system/css"
-import { grid, wrap } from "../../styled-system/patterns"
 import { Flipper, Flipped } from "react-flip-toolkit"
 
 
 function CardsContainer(props) {
+    
     return (
         <Flipper flipKey={props.cardsData.map((card) => card.id).join(",")}>
             <div className={wrap({
