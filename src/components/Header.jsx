@@ -14,7 +14,7 @@ function Header(){
             p: '2rem 3rem',
             mb: '0',
             })}>
-                <img src="../src/assets/pokememory_logo.svg" alt="logo" className={css({
+                <img src="../../src/assets/pokememory_logo.svg" alt="logo" className={css({
                     height: 'auto',
                     width: {lg:'4.5rem', md:'4rem', sm:'3.5rem'}
                 })}/>
