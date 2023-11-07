@@ -7,6 +7,6 @@ const { vitePlugin: VitePluginGhPages } = pkg
 export default defineConfig({
   plugins: [react(), VitePluginGhPages],
   "include":  ["src", "styled-system"],
-  "base": '/jennananas/pokememory/'
+  "base": '/pokememory/'
   
 })
