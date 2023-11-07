@@ -3,7 +3,7 @@ import { css } from "../../styled-system/css"
 import { grid, wrap } from "../../styled-system/patterns"
 
 
-function CardsContainer() {
+function CardsContainer(props) {
     return (
         <div className={wrap({
             m: '0rem',
@@ -17,13 +17,10 @@ function CardsContainer() {
                 m:'2rem'
             }
         })}>
-            <PokeCard name='Pokemon Name' spriteUrl='./src/assets/spriteTest.svg'/>
-            <PokeCard name='Pokemon Name' spriteUrl='./src/assets/spriteTest.svg'/>
-            <PokeCard name='Pokemon Name' spriteUrl='./src/assets/spriteTest.svg'/>
-            <PokeCard name='Pokemon Name' spriteUrl='./src/assets/spriteTest.svg'/>
-            <PokeCard name='Pokemon Name' spriteUrl='./src/assets/spriteTest.svg'/>
-            <PokeCard name='Pokemon Name' spriteUrl='./src/assets/spriteTest.svg'/>
-            <PokeCard name='Pokemon Name' spriteUrl='./src/assets/spriteTest.svg'/>
+            {props.cardsData.map((card) => (
+                <PokeCard id={card.id} key={card.id} onCardClick={props.onCardClick} name={card.name} spriteUrl={card.image}/>
+            ))}
+            
         </div>
     
     )

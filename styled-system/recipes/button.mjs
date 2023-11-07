@@ -14,6 +14,10 @@ const buttonSlotNames = [
   [
     "score",
     "button__score"
+  ],
+  [
+    "replay",
+    "button__replay"
   ]
 ]
 const buttonSlotFns = /* @__PURE__ */ buttonSlotNames.map(([slotName, slotKey]) => [slotName, createRecipe(slotKey, buttonDefaultVariants, getSlotCompoundVariant(buttonCompoundVariants, slotName))])

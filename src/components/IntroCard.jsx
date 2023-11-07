@@ -1,7 +1,12 @@
 import {css} from '../../styled-system/css'
 import { flex, center } from '../../styled-system/patterns'
 import BtnLevel from './BtnLevel'
-function IntroCard(){
+
+function IntroCard(props){
+    const handleLevelSelect = (selectedLevel) => {
+        props.onLevelSelected(selectedLevel);
+        console.log(selectedLevel)
+    };
     return(
         <div className={center({
             height:'80vh',
@@ -36,9 +41,9 @@ function IntroCard(){
                 justify:'center',
                 align:{sm:'center'}
             })}>
-                <BtnLevel level='Easy'/>
-                <BtnLevel level='Medium'/>
-                <BtnLevel level='Hard'/>
+                <BtnLevel onLevelSelected={handleLevelSelect} level='Easy'/>
+                <BtnLevel onLevelSelected={handleLevelSelect} level='Medium'/>
+                <BtnLevel onLevelSelected={handleLevelSelect} level='Hard'/>
             </div>
         </div>
         </div>

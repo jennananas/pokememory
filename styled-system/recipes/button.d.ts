@@ -16,7 +16,7 @@ export type ButtonVariantProps = {
 
 export interface ButtonRecipe {
   __type: ButtonVariantProps
-  (props?: ButtonVariantProps): Pretty<Record<"level" | "score", string>>
+  (props?: ButtonVariantProps): Pretty<Record<"level" | "score" | "replay", string>>
   raw: (props?: ButtonVariantProps) => ButtonVariantProps
   variantMap: ButtonVariantMap
   variantKeys: Array<keyof ButtonVariant>
