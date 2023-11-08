@@ -1,6 +1,6 @@
 import {css} from '../../styled-system/css'
 import { flex } from '../../styled-system/patterns'
-
+import logo from '../assets/images/pokememory_logo.svg'
 
 function Header(){
 
@@ -14,12 +14,12 @@ function Header(){
             p: '2rem 3rem',
             mb: '0',
             })}>
-                <img src="../../src/assets/pokememory_logo.svg" alt="logo" className={css({
+                <img src={logo} alt="logo" className={css({
                     height: 'auto',
-                    width: {lg:'4.5rem', md:'4rem', sm:'3.5rem'}
+                    width: {xl:'4.5rem', lg:'4.5rem', md:'4rem', sm:'3.5rem'}
                 })}/>
                 <h1 className={css({
-                    fontSize: {lg:'4rem', md:'3rem', sm:'2rem'},
+                    fontSize: {xl:'4rem',lg:'4rem', md:'3rem', sm:'2rem'},
                     color: '#001A6E',
                     fontFamily:'Bowlby One',
                     textTransform:'uppercase'

@@ -11,8 +11,8 @@ function PokeCard(props){
             direction:'column',
             bg:'#FBFBFB',
             borderRadius:'1.5rem',
-            w: {sm:'10rem', md:'15rem', lg:'12rem'},
-            h: {sm:'10rem', md:'15rem', lg:'15rem'}
+            w: {sm:'10rem', md:'15rem', lg:'12rem', xl:'20rem'},
+            h: '100%'
         })}>
             <img className={css({
                 p:'2rem',

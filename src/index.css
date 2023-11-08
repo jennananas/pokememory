@@ -1,7 +1,11 @@
 :root {
   @layer reset, base, tokens, recipes, utilities;
   --white-bg: #FBFBFB;
-  background: url('../src/assets/background.svg');
+  background: url('../src/assets/images/background.svg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-size:62.5%;
   body {
     margin: 0;

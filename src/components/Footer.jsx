@@ -8,7 +8,7 @@ function Footer(){
             justify:'center',
             align:'center',
             width:'100vw',
-            height:'2.5rem',
+            height:{sm:'2rem', md:'2rem', lg:'3rem', xl:'4rem'},
             bg:'#FBFBFB',
             position:'fixed',
             bottom:'0',
@@ -16,7 +16,7 @@ function Footer(){
         })}>
             <p className={css({
                 color:'#001A6E',
-                fontSize:'0.85rem', 
+                fontSize:{sm:'0.8rem', md:'1rem', lg:'1.5rem', xl:'1.5rem'}, 
                 fontFamily:'Merriweather Sans'
             })}>developped by <a className={css({
                 cursor:'pointer'
