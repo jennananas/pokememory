@@ -14,7 +14,7 @@ function CardsContainer(props) {
                 m: {sm:'0rem', md:'2rem', lg:'2rem 10rem', xl:'3rem 10rem'},
                 gap:{sm:'1rem', md:'1rem', lg:'3rem', xl:'3rem'},
                 minChildWidth:{sm:'5rem', md:'15rem', lg:'12rem', xl:'20rem'},
-                columns:{sm:'2', mdToXl:'4'}
+                columns:{sm:'2', mdTo2xl:'4'}
             })}>
                 {props.cardsData.map((card) => (
                     <Flipped key={card.id} flipId={card.id}>
